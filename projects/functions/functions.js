@@ -25,6 +25,13 @@ function returnArgumentsArray() {
   }
   return result;
 }
+// или так
+/*
+function returnArgumentsArray(...args) {
+    return [...args];
+}
+*/
+
 returnArgumentsArray(1, 2, 3, 'vasya');
 
 function sum(a, b) {
@@ -37,5 +44,5 @@ function bindFunction(func, arg1, arg2) {
   };
 }
 
-const newSum = bindFunction(sum, 2, 4);
+const newSum = bindFunction.bind(sum, 2, 4);
 console.log(newSum());
