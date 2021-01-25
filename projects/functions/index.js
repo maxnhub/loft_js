@@ -53,12 +53,8 @@ function returnCounter(number = 0) {
  Пример:
    returnArgumentsArray(1, 2, 3) вернет [1, 2, 3]
  */
-function returnArgumentsArray() {
-  const result = [];
-  for (let i = 0; i < arguments.length; i++) {
-    result[i] = arguments[i];
-  }
-  return result;
+function returnArgumentsArray(...args) {
+  return args;
 }
 
 /*
@@ -73,25 +69,8 @@ function returnArgumentsArray() {
    console.log(newSum()) выведет 6
  */
 
-// function fn(...args) {
-//   const result = [];
-//   for (let i = 0; i < args.length; i++) {
-//     result[i] = arguments[i];
-//   }
-//   return result;
-// }
-//
-// function bindFunction(fn, ...args) {
-//
-//   return function newSum() {
-//     return this.fn(...args);
-//   };
-// }
-
 function bindFunction(func, ...args) {
-  return function newSum() {
-    return func(...args);
-  };
+  return func.bind(null, ...args);
 }
 
 export {
