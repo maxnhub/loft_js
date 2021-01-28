@@ -41,7 +41,13 @@ function map(array, fn) {
  Пример:
    reduce([1, 2, 3], (all, current) => all + current) // 6
  */
-function reduce(array, fn, initial) {}
+function reduce(array, fn, initial) {
+  const newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    fn(newArr, array[i], i, array);
+  }
+  return newArr;
+}
 
 /*
  Задание 4:
@@ -71,6 +77,17 @@ function upperProps(obj) {
    obj.foo = 2;
    console.log(obj.foo); // 4
  */
-function createProxy(obj) {}
+function createProxy(obj) {
+  // let handler = {
+  //   set: function(obj, prop, value) {
+  //     if (!Number.isInteger(value)) {
+  //       throw new Error('The value is not a number');
+  //     }
+  //   },
+  //   let proxy = function(acc, func) {
+  //
+  //   }
+  // }
+}
 
 export { forEach, map, reduce, upperProps, createProxy };
