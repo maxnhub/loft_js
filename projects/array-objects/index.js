@@ -26,9 +26,11 @@ function forEach(array, fn) {
  */
 function map(array, fn) {
   const newArr = [];
+
   for (let i = 0; i < array.length; i++) {
     newArr[i] = fn(array[i], i, array);
   }
+
   return newArr;
 }
 
@@ -43,9 +45,11 @@ function map(array, fn) {
  */
 function reduce(array, fn, initial) {
   const newArr = [];
+
   for (let i = 0; i < array.length; i++) {
     fn(newArr, array[i], i, array);
   }
+
   return newArr;
 }
 
