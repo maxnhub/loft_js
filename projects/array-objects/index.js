@@ -63,10 +63,12 @@ function reduce(array, fn, initial) {
  */
 function upperProps(obj) {
   const array = [];
+
   for (let key in obj) {
     key = key.toUpperCase();
     array.push(key);
   }
+
   return array;
 }
 
