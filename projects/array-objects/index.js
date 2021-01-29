@@ -44,13 +44,14 @@ function map(array, fn) {
    reduce([1, 2, 3], (all, current) => all + current) // 6
  */
 function reduce(array, fn, initial) {
-  const newArr = [];
+  const hasInitial = typeof initial !== 'undefined';
+  let prev = hasInitial ? initial : array[0];
 
-  for (let i = 0; i < array.length; i++) {
-    fn(newArr, array[i], i, array);
+  for (let i = hasInitial ? 0 : 1; i < array.length; i++) {
+    prev = fn(prev, array[i], i, array);
   }
 
-  return newArr;
+  return prev;
 }
 
 /*
@@ -62,14 +63,7 @@ function reduce(array, fn, initial) {
    upperProps({ name: 'Сергей', lastName: 'Петров' }) вернет ['NAME', 'LASTNAME']
  */
 function upperProps(obj) {
-  const array = [];
-
-  for (let key in obj) {
-    key = key.toUpperCase();
-    array.push(key);
-  }
-
-  return array;
+  return Object.keys(obj).map((name) => name.toUpperCase());
 }
 
 /*
@@ -84,16 +78,15 @@ function upperProps(obj) {
    console.log(obj.foo); // 4
  */
 function createProxy(obj) {
-  // let handler = {
-  //   set: function(obj, prop, value) {
-  //     if (!Number.isInteger(value)) {
-  //       throw new Error('The value is not a number');
-  //     }
-  //   },
-  //   let proxy = function(acc, func) {
-  //
-  //   }
-  // }
+  return new Proxy(obj, {
+    set(obj, key, value) {
+      if (!Number.isInteger(value)) {
+        throw new Error('The value is not a number');
+      }
+      obj[key] = value ** 2;
+      return true;
+    },
+  });
 }
 
 export { forEach, map, reduce, upperProps, createProxy };
