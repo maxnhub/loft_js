@@ -19,18 +19,20 @@
 function isAllTrue(array, fn) {
   if (array === 0 || array.length <= 0) {
     throw new Error('empty array');
-  } else if (typeof fn != 'function') {
-    throw new Error('fn is not a function');
-  } else {
-    let result = true;
-    for (let i = 0; i <= array.length; i++) {
-      const bool = fn(array[i]);
-      if (bool === 0) {
-        return (result = false);
-      }
-    }
-    return result;
   }
+  if (typeof fn != 'function') {
+    throw new Error('fn is not a function');
+  }
+  let result = true;
+
+  for (let i = 0; i <= array.length; i++) {
+    result = fn(array[i]);
+    if (!result) {
+      break;
+    }
+  }
+
+  return result;
 }
 
 /*
@@ -52,18 +54,21 @@ function isAllTrue(array, fn) {
 function isSomeTrue(array, fn) {
   if (array === 0 || array.length <= 0) {
     throw new Error('empty array');
-  } else if (typeof fn != 'function') {
-    throw new Error('fn is not a function');
-  } else {
-    let result = false;
-    for (let i = 0; i <= array.length; i++) {
-      const bool = fn(array[i]);
-      if (bool !== 0) {
-        return (result = true);
-      }
-    }
-    return result;
   }
+
+  if (typeof fn != 'function') {
+    throw new Error('fn is not a function');
+  }
+  let result = false;
+
+  for (let i = 0; i <= array.length; i++) {
+    result = fn(array[i]);
+    if (!result) {
+      break;
+    }
+  }
+
+  return result;
 }
 
 /*
@@ -80,9 +85,11 @@ function isSomeTrue(array, fn) {
 function returnBadArguments(fn, ...args) {
   const badArgs = [];
   const goodArgs = [];
+
   if (typeof fn != 'function') {
     throw new Error('fn is not a function');
   }
+
   for (const item of [...args]) {
     try {
       goodArgs.push(item);
@@ -90,6 +97,7 @@ function returnBadArguments(fn, ...args) {
       badArgs.push(item);
     }
   }
+
   return badArgs;
 }
 
