@@ -13,6 +13,7 @@
 function createDivWithText(text) {
   const element = document.createElement('div');
   element.textContent = text;
+  return element;
 }
 
 /*
@@ -24,10 +25,7 @@ function createDivWithText(text) {
    prepend(document.querySelector('#one'), document.querySelector('#two')) // добавит элемент переданный первым аргументом в начало элемента переданного вторым аргументом
  */
 function prepend(what, where) {
-  const parentElement = document.querySelector(where);
-  const theFirstChild = parentElement.firstElementChild;
-  const newElement = document.createElement(what);
-  parentElement.insertBefore(newElement, theFirstChild);
+  where.prepend(what);
 }
 
 /*
@@ -53,7 +51,7 @@ function findAllPSiblings(where) {
   const arr = [];
 
   for (const child of where.children) {
-    if (child.nextElementSibling.nodeName === 'P') {
+    if (child.nextElementSibling && child.nextElementSibling.nodeName === 'P') {
       arr.push(child);
     }
   }
@@ -81,10 +79,8 @@ function findAllPSiblings(where) {
 function findError(where) {
   const result = [];
 
-  for (const child of where.childNodes) {
-    if (child.type === 3) {
-      result.push(child);
-    }
+  for (const child of where.children) {
+    result.push(child.textContent);
   }
 
   return result;
@@ -104,7 +100,7 @@ function findError(where) {
  */
 function deleteTextNodes(where) {
   for (const child of where.childNodes) {
-    if (child.type === 3) {
+    if (child.TEXT_NODE) {
       where.removeChild(child);
     }
   }
@@ -123,7 +119,7 @@ function deleteTextNodes(where) {
  */
 function deleteTextNodesRecursive(where) {
   for (const child of where.childNodes) {
-    if (child.type === 3) {
+    if (child.TEXT_NODE) {
       where.removeChild(child);
     } else {
       deleteTextNodesRecursive(child);
