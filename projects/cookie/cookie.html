@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <style>
     #app input {
         border-radius: 5px;
@@ -27,24 +33,24 @@
 
 <div id="app">
     <div id="filter-block">
-        Поиск cookie: <input id="filter-name-input" placeholder="имя cookie" type="text">
+        Search cookie: <input id="filter-name-input" placeholder="name cookie" type="text">
     </div>
     <hr>
     <div id="add-block">
-        Добавить cookie:<br>
-        <input id="add-name-input" placeholder="имя cookie" type="text"><br>
-        <input id="add-value-input" placeholder="значение cookie" type="text"><br>
-        <button id="add-button">добавить cookie</button>
+        Add cookie:<br>
+        <input id="add-name-input" placeholder="name cookie" type="text"><br>
+        <input id="add-value-input" placeholder="value cookie" type="text"><br>
+        <button id="add-button">add cookie</button>
     </div>
     <hr>
     <div id="list-block">
-        Доступные cookie:
+        Available cookie:
         <table id="list-table">
             <thead>
             <tr>
-                <th>имя</th>
-                <th>значение</th>
-                <th>удалить</th>
+                <th>name</th>
+                <th>value</th>
+                <th>delete</th>
             </tr>
             </thead>
             <tbody>
@@ -53,3 +59,6 @@
         </table>
     </div>
 </div>
+</html>
+
+<script type="text/javascript" src="index.js"></script>

@@ -23,7 +23,7 @@
  Запрещено использовать сторонние библиотеки. Разрешено пользоваться только тем, что встроено в браузер
  */
 
-import './cookie.html';
+// import './cookie.html';
 
 /*
  app - это контейнер для всех ваших домашних заданий
@@ -46,8 +46,38 @@ import './cookie.html';
 // // таблица со списком cookie
 // const listTable = homeworkContainer.querySelector('#list-table tbody');
 //
-// filterNameInput.addEventListener('input', function () {});
+// const fragment  = document.createDocumentFragment()
 //
-// addButton.addEventListener('click', () => {});
+// // filterNameInput.addEventListener('input', function () {
+// //
+// // });
+//
+// let storage = localStorage;
+
+// addButton.addEventListener('click', function () {
+// storage.data = JSON.stringify({
+//     cookieName: addNameInput.value,
+//     cookieValue: addValueInput.value
+// });
+// let tr = document.createElement('tr');
+// let name = document.createElement('th');
+// name.textContent = addNameInput.value;
+// let value = document.createElement('th');
+// value.textContent = addValueInput.value;
+// let delField = document.createElement('th');
+// let delButton = document.createElement('button');
+// delButton.classList.add('cookie-delete');
+// delButton.textContent = 'delete this cookie';
+// delField.appendChild(delButton);
+// tr.appendChild(name);
+// tr.appendChild(value);
+// tr.appendChild(delField);
+// listTable.appendChild(tr);
+// });
 //
 // listTable.addEventListener('click', (e) => {});
+
+// const data = JSON.parse(storage.data || '{}');
+//
+// addNameInput.value = data.cookieName || '';
+// addValueInput.value = data.cookieValue || '';
