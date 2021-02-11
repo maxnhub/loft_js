@@ -33,8 +33,8 @@ function removeListener(eventName, target, fn) {
    skipDefault('click', document.querySelector('a')) // после вызова функции, клики на указанную ссылку не должны приводить к переходу на другую страницу
  */
 function skipDefault(eventName, target) {
-  target.addEventListener(eventName, function (eventName) {
-    eventName.preventDefault();
+  target.addEventListener(eventName, (e) => {
+    e.preventDefault();
   });
 }
 
@@ -78,13 +78,13 @@ function delegate(target, fn) {
    once(document.querySelector('button'), () => console.log('обработчик выполнился!')) // добавит такой обработчик кликов для указанного элемента, который вызовется только один раз и затем удалится
  */
 function once(target, fn) {
-  let once = false;
-  target.addEventListener('click', function (e) {
-    if (!once) {
+  target.addEventListener(
+    'click',
+    function (e) {
       fn();
-      return (once = true);
-    }
-  });
+    },
+    { once: true }
+  );
 }
 
 export { addListener, removeListener, skipDefault, emulateClick, delegate, once };
