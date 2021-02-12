@@ -33,7 +33,7 @@
    const newDiv = document.createElement('div');
    homeworkContainer.appendChild(newDiv);
  */
-// РАСКОММЕНТЬ ВСЁ ЭТО!!!!!
+
 // const homeworkContainer = document.querySelector('#app');
 // // текстовое поле для фильтрации cookie
 // const filterNameInput = homeworkContainer.querySelector('#filter-name-input');
@@ -46,38 +46,72 @@
 // // таблица со списком cookie
 // const listTable = homeworkContainer.querySelector('#list-table tbody');
 //
-// const fragment  = document.createDocumentFragment()
+// const cookiesArr = getCookies();
+// let filterVal = '';
 //
-// // filterNameInput.addEventListener('input', function () {
-// //
-// // });
+// updateListTable();
 //
-// let storage = localStorage;
-
+// filterNameInput.addEventListener('input', function () {
+//
+// });
+//
 // addButton.addEventListener('click', function () {
-// storage.data = JSON.stringify({
-//     cookieName: addNameInput.value,
-//     cookieValue: addValueInput.value
-// });
-// let tr = document.createElement('tr');
-// let name = document.createElement('th');
-// name.textContent = addNameInput.value;
-// let value = document.createElement('th');
-// value.textContent = addValueInput.value;
-// let delField = document.createElement('th');
-// let delButton = document.createElement('button');
-// delButton.classList.add('cookie-delete');
-// delButton.textContent = 'delete this cookie';
-// delField.appendChild(delButton);
-// tr.appendChild(name);
-// tr.appendChild(value);
-// tr.appendChild(delField);
-// listTable.appendChild(tr);
+//
 // });
 //
-// listTable.addEventListener('click', (e) => {});
-
-// const data = JSON.parse(storage.data || '{}');
+// listTable.addEventListener('click', (e) => {
 //
-// addNameInput.value = data.cookieName || '';
-// addValueInput.value = data.cookieValue || '';
+// });
+//
+// function getCookies() {
+//     return document.cookie
+//         .split('; ')
+//         .filter(Boolean)
+//         .map((cookie) => cookie.match(/^([^=]+)=(.+)/))
+//         .reduce((obj, [, name, value]) => {
+//             obj.set(name, value);
+//
+//             return obj;
+//     }, new Map());
+// }
+//
+// function updateListTable() {
+//     const fragment = document.createDocumentFragment();
+//     let total = 0;
+//
+//     listTable.innerHTML = '';
+//
+//     for (const [name, value] of cookiesMap) {
+//         if(
+//             filterVal &&
+//             !name.toLowerCase().includes(filterValue.toLowerCase()) &&
+//             !value.toLowerCase().includes(filterValue.toLowerCase())
+//         ) {
+//             continue;
+//         }
+//
+//         total++;
+//
+//         let tr = document.createElement('tr');
+//         let nameField = document.createElement('td');
+//         nameField.textContent = name;
+//         let valueField = document.createElement('td');
+//         valueField.textContent = value;
+//         let delField = document.createElement('td');
+//         let delButton = document.createElement('button');
+//         delButton.textContent = 'delete this cookie';
+//         delField.appendChild(delButton);
+//         delButton.dataset.role = 'cookie-delete';
+//         delButton.dataset.cookieName = name;
+//         tr.append(nameField, valueField, delField);
+//         fragment.append(tr);
+//
+//     }
+//
+//     if (total) {
+//         listTable.parentNode.classList.remove('hidden');
+//         listTable.append(fragment);
+//     } else {
+//         listTable.parentNode.classList.add('hidden');
+//     }
+// }
