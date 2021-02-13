@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    #app input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin: 5px 0;
+    }
+
+    #app table {
+        width: 100%;
+    }
+
+    #app table td,
+    #app table th {
+        padding: 5px;
+        text-align: left;
+    }
+
+    #app table td.value {
+        word-break: break-word;
+    }
+
+    #app tbody tr:nth-child(odd) {
+        background: #ddd;
+    }
+</style>
+
+<div id="app">
+    <div id="filter-block">
+        Search cookie: <input id="filter-name-input" placeholder="name cookie" type="text">
+    </div>
+    <hr>
+    <div id="add-block">
+        Add cookie:<br>
+        <input id="add-name-input" placeholder="name cookie" type="text"><br>
+        <input id="add-value-input" placeholder="value cookie" type="text"><br>
+        <button id="add-button">add cookie</button>
+    </div>
+    <hr>
+    <div id="list-block">
+        Available cookie:
+        <table id="list-table">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>value</th>
+                <th>delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- tr добавлять сюда -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</html>
+
+<script type="text/javascript" src="index.js"></script>
