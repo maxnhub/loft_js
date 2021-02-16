@@ -26,29 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b53d64e8-16f2-4f1a-b1a3-94b31d080a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/test/index.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/helper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/html-inject-loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/jest-html-transformer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Maket/ghost/dist/index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Loftschool/project-burgers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -106,7 +87,7 @@
       <workItem from="1610974340283" duration="7572000" />
       <workItem from="1611136077618" duration="6483000" />
       <workItem from="1611590570860" duration="21951000" />
-      <workItem from="1611943902515" duration="43820000" />
+      <workItem from="1611943902515" duration="47416000" />
     </task>
     <task id="LOCAL-00001" summary="minus jpg">
       <created>1610974402039</created>
@@ -332,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613212768356</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="vp_1">
+      <created>1613486376474</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1613486376476</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,21 +375,26 @@
     <MESSAGE value="after CR" />
     <MESSAGE value="часть hw_7" />
     <MESSAGE value="hw_7" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw_7" />
+    <MESSAGE value="vp_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="vp_1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2144" y="337" width="685" height="341" key="#Notifications" timestamp="1612196432527">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2144" y="337" width="685" height="341" key="#Notifications/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1612196432527" />
-    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1613154593250">
+    <state x="2267" y="161" key="#PHP" timestamp="1613487146601">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613154593250" />
-    <state x="2340" y="273" key="FileChooserDialogImpl" timestamp="1613066928580">
+    <state x="2267" y="161" key="#PHP/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487146600" />
+    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1613487153737">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2340" y="273" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613066928580" />
+    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487153737" />
+    <state x="2340" y="273" key="FileChooserDialogImpl" timestamp="1613487312022">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2340" y="273" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487312022" />
     <state x="635" y="352" key="NewPhpFileDialog" timestamp="1611751836684">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -414,11 +407,11 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="150" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611590670431" />
-    <state x="460" y="208" key="Vcs.Push.Dialog.v2" timestamp="1613212770004">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613486377979">
+      <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="208" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613212770004" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613154503993" />
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613486377979" />
     <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1612601947266">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
