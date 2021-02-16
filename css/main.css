@@ -1,0 +1,35 @@
+.map__main {
+    flex: 1;
+}
+
+.map {
+    width: 100%;
+    height: 90vh;
+}
+
+.map__hint {
+    background: linear-gradient(to bottom,#f9b43b 0% 25%, #eb8c38 50%, #f9b43b 65% 100%);
+    display: flex;
+    font-family: 'Ubuntu', 'Trebuchet MS', sans-serif;
+    font-size: 0.875rem;
+    color: white;
+    border-radius: 3px;
+    padding: 1rem 1.5rem;
+}
+
+.map__balloon {
+    background: linear-gradient(to bottom,#f9b43b 0% 25%, #eb8c38 50%, #f9b43b 65% 100%);
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    font-family: 'Ubuntu', 'Trebuchet MS', sans-serif;
+    font-size: 0.875rem;
+    color: white;
+    border-radius: 3px;
+}
+
+.map__burger-img {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    margin-right: 1rem;
+}
