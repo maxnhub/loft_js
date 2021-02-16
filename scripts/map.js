@@ -7,7 +7,7 @@ let placemarks = [
             hintContent: '<div class="map__hint">ул.Литераторов д.19</div>',
             balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="./src/icons/google-map-marker.png" alt="Бургер"/>',
+                '<img class="map__img" src="./src/icons/google-map-marker.png" alt="Метка"/>',
                 'Пышечная по адресу: ул.Литераторов д.19',
                 '</div>'
             ]
@@ -18,7 +18,7 @@ let placemarks = [
             hintContent: '<div class="map__hint">Малый пр-т В.О. д.64</div>',
             balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="./src/icons/google-map-marker.png" alt="Бургер"/>',
+                '<img class="map__img" src="./src/icons/google-map-marker.png" alt="Метка"/>',
                 'Наверняка какой-нибудь музей: Малый пр-т В.О. д.64',
                 '</div>'
             ]
@@ -29,7 +29,7 @@ let placemarks = [
             hintContent: '<div class="map__hint">наб. реки Фрнтанки д.56</div>',
             balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="./src/icons/google-map-marker.png" alt="Бургер"/>',
+                '<img class="map__img" src="./src/icons/google-map-marker.png" alt="Метка"/>',
                 'Рандомные мужики ловят рыбу: наб. реки Фонтанки д.56',
                 '</div>'
             ]
@@ -70,7 +70,7 @@ function init() {
     });
     myMap.events.add('click', function (e) {
         var coords = e.get('coords');
-        var placemark = new YMaps.Placemark(new YMaps.GeoPoint(coords[0], coords[1]), {draggable: 1,
+        var placemark = new ymaps.Placemark(new ymaps.GeoPoint(coords[0], coords[1]), {draggable: 1,
             hintOptions: {
                 maxWidth: 100,
                 showTimeout: 200,
