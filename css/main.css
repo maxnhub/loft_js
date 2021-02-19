@@ -1,6 +1,8 @@
 .map {
     width: 100%;
-    height: 90vh;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .map__hint {

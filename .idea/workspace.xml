@@ -26,6 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b53d64e8-16f2-4f1a-b1a3-94b31d080a8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/geoMarkers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -87,7 +89,7 @@
       <workItem from="1610974340283" duration="7572000" />
       <workItem from="1611136077618" duration="6483000" />
       <workItem from="1611590570860" duration="21951000" />
-      <workItem from="1611943902515" duration="52072000" />
+      <workItem from="1611943902515" duration="55069000" />
     </task>
     <task id="LOCAL-00001" summary="minus jpg">
       <created>1610974402039</created>
@@ -334,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613504163242</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="наброски vp_1">
+      <created>1613594397750</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1613594397751</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,11 +431,11 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="150" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611590670431" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613504164818">
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613594399319">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="208" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613212770004" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613504164818" />
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613594399319" />
     <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1612601947266">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
