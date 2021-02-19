@@ -1,34 +1,60 @@
-<!DOCTYPE html>
-<html lamg="ru">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Maps</title>
-        <link rel="stylesheet" href="./css/main.css" />
-    </head>
 
-    <body>
-        <div id="map" class="map"></div>
+<style>
+    .map {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
 
-        <script src="scripts/main.js"></script>
-        <script type="template" id="addFormTemplate">
-            <div class="review-list"></div>
-            <div class="form" data-role="review-form">
-                <h3>Отзыв:</h3>
-                <div class="field">
-                    <input data-role="review-name" type="text" placeholder="Укажите ваше имя">
-                </div>
-                <div class="field">
-                    <input data-role="review-place" type="text" placeholder="Укажите место">
-                </div>
-                <div class="field">
-                    <textarea data-role="review-text" rows="5" placeholder="Оставьте отзыв"></textarea>
-                </div>
+    .map__img {
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        margin-right: 1rem;
+    }
 
-                <button data-role="review-add">Добавить</button>
-                <span class="form-error"></span>
-            </div>
-        </script>
-    </body>
-</html>
+    .form {
+        width: 300px;
+    }
+
+    .form .field {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form .field input,
+    .form .field textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form .field textarea {
+        resize: none;
+    }
+
+    .form .form-error {
+        color: red;
+    }
+</style>
+
+<div id="map" class="map"></div>
+
+<script src="index.js"></script>
+<script type="template" id="addFormTemplate">
+    <div class="review-list"></div>
+    <div class="form" data-role="review-form">
+        <h3>Отзыв:</h3>
+        <div class="field">
+            <input data-role="review-name" type="text" placeholder="Укажите ваше имя">
+        </div>
+        <div class="field">
+            <input data-role="review-place" type="text" placeholder="Укажите место">
+        </div>
+        <div class="field">
+            <textarea data-role="review-text" rows="5" placeholder="Оставьте отзыв"></textarea>
+        </div>
+
+        <button data-role="review-add">Добавить</button>
+        <span class="form-error"></span>
+    </div>
+</script>

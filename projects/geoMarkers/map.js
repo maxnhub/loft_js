@@ -84,5 +84,3 @@ export default class Map {
         this.map.balloon.close();
     }
 }
-
-module.exports = { Map };

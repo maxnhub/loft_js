@@ -27,9 +27,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b53d64e8-16f2-4f1a-b1a3-94b31d080a8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/geoMarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/geoMarkers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geoMarkers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/scripts/geoMarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geoMarkers/geoMarkers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geoMarkers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/scripts/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geoMarkers/map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Maxim\JS\OpenServer\domains\loftjs\projects\geoMarkers" />
       <recent name="C:\Maxim\JS\OpenServer\domains\loftjs" />
       <recent name="C:\Maxim\JS\OpenServer\domains\loftjs\projects\functions" />
     </key>
@@ -87,7 +90,7 @@
       <workItem from="1610974340283" duration="7572000" />
       <workItem from="1611136077618" duration="6483000" />
       <workItem from="1611590570860" duration="21951000" />
-      <workItem from="1611943902515" duration="60310000" />
+      <workItem from="1611943902515" duration="61257000" />
     </task>
     <task id="LOCAL-00001" summary="minus jpg">
       <created>1610974402039</created>
@@ -355,7 +358,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613756615632</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="наброски vp_1">
+      <created>1613757538379</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1613757538379</updated>
+    </task>
+    <task id="LOCAL-00040" summary="наброски vp_1">
+      <created>1613757758439</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1613757758439</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,10 +440,10 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2267" y="161" key="#PHP/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487146600" />
-    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1613487153737">
+    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1613758236872">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487153737" />
+    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613758236872" />
     <state x="2340" y="273" key="FileChooserDialogImpl" timestamp="1613487312022">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
@@ -443,16 +460,16 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="150" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611590670431" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613756619836">
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613757761549">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="208" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613212770004" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613756619836" />
-    <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1612601947266">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613757761549" />
+    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613758373345">
+      <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1612601947266" />
-    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1612535229938" />
+    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613758373345" />
     <state x="2340" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1612813782090">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
