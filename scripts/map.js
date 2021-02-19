@@ -3,11 +3,13 @@ export default class Map {
         this.mapId = mapId;
         this.onClick = onClick;
     }
+
     async init() {
         await this.injectScript();
         await this.loadYMaps();
         this.initMap();
     }
+
     injectScript() {
         return new Promise((resolve) => {
             const script = document.createElement('script');
@@ -16,9 +18,11 @@ export default class Map {
             script.addEventListener('load', resolve);
         })
     }
+
     loadYMaps() {
         return new Promise(resolve => ymaps.ready(resolve)); // здесь появляется глобальный объекс "ymaps"
     }
+
     initMap() {
         let placemarks = [];
         this.map = new ymaps.Map(this.mapId, {
@@ -65,25 +69,19 @@ export default class Map {
         // });
 
         this.map.geoObjects.add(this.clusterer);
-        let geoObjects = [];
-        for (let i = 0; i < placemarks.length; i++) {
-            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude], {
-                    hintContent: placemarks[i].hintContent,
-                    balloonContent: placemarks[i].balloonContent.join('')
-                },
-                {
-                    iconLayout: 'default#image',
-                    iconImageHref: './src/icons/google-map-marker.png',
-                    iconImageSize: [37, 55],
-                    iconImageOffset: [-23, -57]
-                });
-
-        }
-
         this.map.behaviors.enable('scrollZoom');
+    }
 
+    openBalloon(coords, content) {
+        this.map.balloon.open(coords, content);
+    }
+
+    setBalloonContent(content) {
+        this.map.balloon.setData(content);
+    }
+
+    closeBalloon() {
+        this.map.balloon.close();
     }
 }
-const map = new Map('map');
-map.init();
 

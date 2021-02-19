@@ -5,49 +5,31 @@
     margin: 0;
 }
 
-.map__hint {
-    background: linear-gradient(to bottom,#f9b43b 0% 25%, #eb8c38 50%, #f9b43b 65% 100%);
-    display: flex;
-    font-family: 'Ubuntu', 'Trebuchet MS', sans-serif;
-    font-size: 0.875rem;
-    color: white;
-    border-radius: 3px;
-    padding: 1rem 1.5rem;
-}
-
-.map__balloon {
-    background: linear-gradient(to bottom,#f9b43b 0% 25%, #eb8c38 50%, #f9b43b 65% 100%);
-    display: flex;
-    align-items: flex-start;
-    padding: 1rem 1.5rem;
-    font-size: 0.875rem;
-    color: white;
-    border-radius: 3px;
-}
-
 .map__img {
     max-width: 2.5rem;
     max-height: 2.5rem;
     margin-right: 1rem;
 }
 
-.placemark_layout_container {
-    position: relative;
-    font-family: Georgia;
-    font-size: 40px;
-    text-align: center;
-    font-weight: bold;
+.form {
+    width: 300px;
 }
 
-/* Квадратный макет метки */
-.square_layout {
-    position: absolute;
-    left: -23px;
-    top: -23px;
-    width: 46px;
-    height: 46px;
-    line-height: 46px;
-    border: 2px solid #218703;
-    background-color: #F8FDF7;
-    color: #218703;
+.form .field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form .field input,
+.form .field textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form .field textarea {
+    resize: none;
+}
+
+.form .form-error {
+    color: red;
 }
