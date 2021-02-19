@@ -1,4 +1,4 @@
-import Map from './map';
+const { Map } = require('./app')
 
 export default class GeoMarkers {
     constructor() {
@@ -25,3 +25,5 @@ export default class GeoMarkers {
         return root;
     }
 }
+
+module.exports = { GeoMarkers };

@@ -1,3 +1,3 @@
-import GeoMarkers from './geoMarkers';
+const { GeoMarkers } = require('./geoMarkers');
 
 new GeoMarkers();

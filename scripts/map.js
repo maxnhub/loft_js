@@ -85,3 +85,4 @@ export default class Map {
     }
 }
 
+module.exports = { Map };
