@@ -26,8 +26,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b53d64e8-16f2-4f1a-b1a3-94b31d080a8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/geoMarkers/GeoMarkers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/geoMarkers/Map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/geoMarkers/server/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/geoMarkers/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/geoMarkers/server/storage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/geoMarkers/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/geoMarkers.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/geoMarkers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geoMarkers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/geoMarkers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/geoMarkers/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +96,7 @@
       <workItem from="1610974340283" duration="7572000" />
       <workItem from="1611136077618" duration="6483000" />
       <workItem from="1611590570860" duration="21951000" />
-      <workItem from="1611943902515" duration="62483000" />
+      <workItem from="1611943902515" duration="85192000" />
     </task>
     <task id="LOCAL-00001" summary="minus jpg">
       <created>1610974402039</created>
@@ -375,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613758584635</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="наброски vp_1">
+      <created>1613762466049</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1613762466049</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +423,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/course-javascript" />
     </ignored-roots>
@@ -435,9 +453,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="наброски vp_1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2144" y="337" width="685" height="341" key="#Notifications" timestamp="1612196432527">
-      <screen x="1600" y="0" width="1920" height="1040" />
+    <state x="453" y="279" width="557" height="364" key="#Notifications" timestamp="1613778005793">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="453" y="279" width="557" height="364" key="#Notifications/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613778005793" />
     <state x="2144" y="337" width="685" height="341" key="#Notifications/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1612196432527" />
     <state x="2267" y="161" key="#PHP" timestamp="1613487146601">
       <screen x="1600" y="0" width="1920" height="1040" />
@@ -463,16 +482,20 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="150" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611590670431" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613758586561">
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1613762468352">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="208" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613212770004" />
-    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613758586561" />
-    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613758373345">
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613762468352" />
+    <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613778083063">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613778083063" />
+    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613758373345" />
+    <state x="2267" y="253" width="585" height="534" key="find.popup" timestamp="1613764709693">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1612601947266" />
-    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613758373345" />
+    <state x="2267" y="253" width="585" height="534" key="find.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613764709693" />
     <state x="2340" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1612813782090">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
