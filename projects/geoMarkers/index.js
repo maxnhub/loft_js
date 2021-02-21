@@ -7,7 +7,7 @@ class Map {
         await this.injectYMapsScript();
         await this.loadYMaps();
         this.initMap();
-        document.body.addEventListener('click', this.onDocumentClick.bind(this));
+        this.onInit();
     }
     injectYMapsScript() {
         return new Promise((resolve) => {
@@ -21,12 +21,16 @@ class Map {
         return new Promise((resolve) => ymaps.ready(resolve));
     }
     async onInit() {
-        const coords = await this.callApi('coords');
-        for (const item of coords) {
-            for (let i = 0; i < item.total; i++) {
-                this.map.createPlacemark(item.coords);
-            }
-        }
+        const coords = await this.getData();
+        let arr = Object.entries(coords);
+        arr.forEach(([key, value]) => {
+            let x = value.coords[0];
+            let y = value.coords[1];
+            let markerCoords = x + ', ' + y;
+            console.log('markerCoords', markerCoords);
+            this.map.createPlacemark(markerCoords);
+        });
+
         document.body.addEventListener('click', this.onDocumentClick.bind(this));
     }
     async postData(body = {}) {
@@ -37,40 +41,41 @@ class Map {
         return await res.json();
     }
     async getData() {
-        fetch('https://maps-reviews-e5dc7-default-rtdb.firebaseio.com/reviews.json')
-            .then(response => response.json())
-            .then(res => console.log('res', res))
+        // fetch('https://maps-reviews-e5dc7-default-rtdb.firebaseio.com/reviews.json')
+        //     .then(response => response.json())
+        //     .then(res => console.log('res', res))
+        const res = await fetch('https://maps-reviews-e5dc7-default-rtdb.firebaseio.com/reviews.json', {
+            method: 'get'
+        });
+        return await res.json();
     }
-    createForm(coords) {
+    createForm(coords, data) {
         const root = document.createElement('div');
         root.innerHTML = this.formTemplate;
         const reviewList = root.querySelector('.review-list');
         const reviewForm = root.querySelector('[data-role=review-form]');
         reviewForm.dataset.coords = JSON.stringify(coords);
-        console.log('coords', coords);
-        this.getData()
-            .then(res => console.log('res', res))
-            .then(res =>
-            {
-            for(let i = 0; i<= res.length; i++) {
-                console.log('res[i].coords', res[i].coords);
+        console.log('data', data);
 
-                if(координаты из базы == тек.коориданаты) {
-                    for (const item of res[i].coords.review) {
-                        const div = document.createElement('div');
-                        div.classList.add('review-item');
-                        div.innerHTML = `
-                        <div>
-                          <b>${item.name}</b> [${item.place}]
-                        </div>
-                        <div>${item.text}</div>
-                        `;
-                        reviewList.appendChild(div);
-                    }
-                }
+            for(let i = 0; i<= data.length; i++) {
+                console.log('data[i].coords', data[i].coords);
+
+                // if(координаты из базы == тек.коориданаты) {
+                //     for (const item of res[i].coords.review) {
+                //         const div = document.createElement('div');
+                //         div.classList.add('review-item');
+                //         div.innerHTML = `
+                //         <div>
+                //           <b>${item.name}</b> [${item.place}]
+                //         </div>
+                //         <div>${item.text}</div>
+                //         `;
+                //         reviewList.appendChild(div);
+                //     }
+                // }
+
+
             }
-
-            });
 
 
 
@@ -78,7 +83,8 @@ class Map {
     }
     async onClick(coords) {
         await this.openBalloon(coords, 'Загрузка...');
-        const form = this.createForm(coords);
+        const data = await this.getData();
+        const form = this.createForm(coords, data);
         this.setBalloonContent(form.innerHTML);
     }
     async onDocumentClick(e) {
