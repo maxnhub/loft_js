@@ -22,15 +22,10 @@ class Map {
     }
     async onInit() {
         const coords = await this.getData();
-        let arr = Object.entries(coords);
-        arr.forEach(([key, value]) => {
-            let x = value.coords[0];
-            let y = value.coords[1];
-            let markerCoords = x + ', ' + y;
-            console.log('markerCoords', markerCoords);
-            this.map.createPlacemark(markerCoords);
+        const arr = Object.entries(coords);
+        arr.forEach(([key, item]) => {
+            this.createPlacemark(item.coords);
         });
-
         document.body.addEventListener('click', this.onDocumentClick.bind(this));
     }
     async postData(body = {}) {
@@ -56,28 +51,20 @@ class Map {
         const reviewForm = root.querySelector('[data-role=review-form]');
         reviewForm.dataset.coords = JSON.stringify(coords);
         console.log('data', data);
-
-            for(let i = 0; i<= data.length; i++) {
-                console.log('data[i].coords', data[i].coords);
-
-                // if(координаты из базы == тек.коориданаты) {
-                //     for (const item of res[i].coords.review) {
-                //         const div = document.createElement('div');
-                //         div.classList.add('review-item');
-                //         div.innerHTML = `
-                //         <div>
-                //           <b>${item.name}</b> [${item.place}]
-                //         </div>
-                //         <div>${item.text}</div>
-                //         `;
-                //         reviewList.appendChild(div);
-                //     }
-                // }
-
-
-            }
-
-
+        console.log('coords', coords);
+        const arr = Object.entries(data);
+        console.log('arr', arr);
+        arr.forEach(([key, item]) => {
+            const div = document.createElement('div');
+            div.classList.add('review-item');
+            div.innerHTML = `
+                        <div>
+                          <b>${item.review.name}</b> [${item.review.place}]
+                        </div>
+                        <div>${item.review.text}</div>
+                        `;
+            reviewList.appendChild(div);
+        });
 
         return root;
     }
