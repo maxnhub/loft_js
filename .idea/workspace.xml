@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:hw_1" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b53d64e8-16f2-4f1a-b1a3-94b31d080a8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hw_7" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nF8B1NnDeWOrSjk0pJLkVg43H2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Loftschool/project-burgers" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Maxim\JS\OpenServer\domains\loftjs\projects\geoMarkers" />
+      <recent name="C:\Maxim\JS\OpenServer\domains\loftjs" />
+      <recent name="C:\Maxim\JS\OpenServer\domains\loftjs\projects\functions" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b53d64e8-16f2-4f1a-b1a3-94b31d080a8f" name="Default Changelist" comment="" />
+      <created>1610974338446</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610974338446</updated>
+      <workItem from="1610974340283" duration="7572000" />
+      <workItem from="1611136077618" duration="6483000" />
+      <workItem from="1611590570860" duration="21951000" />
+      <workItem from="1611943902515" duration="93872000" />
+    </task>
+    <task id="LOCAL-00001" summary="minus jpg">
+      <created>1610974402039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974402039</updated>
+    </task>
+    <task id="LOCAL-00002" summary="loft sborka">
+      <created>1610974763268</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974763268</updated>
+    </task>
+    <task id="LOCAL-00003" summary="homework_1">
+      <created>1611065980091</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611065980091</updated>
+    </task>
+    <task id="LOCAL-00004" summary="after CR">
+      <created>1611147677919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611147677919</updated>
+    </task>
+    <task id="LOCAL-00005" summary="after CR">
+      <created>1611230111520</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611230111520</updated>
+    </task>
+    <task id="LOCAL-00006" summary="after CR">
+      <created>1611478780917</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611478780917</updated>
+    </task>
+    <task id="LOCAL-00007" summary="after CR">
+      <created>1611589848695</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611589848695</updated>
+    </task>
+    <task id="LOCAL-00008" summary="clone hw_2">
+      <created>1611591154517</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611591154517</updated>
+    </task>
+    <task id="LOCAL-00009" summary="3 задачки">
+      <created>1611693331374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611693331374</updated>
+    </task>
+    <task id="LOCAL-00010" summary="git clone hw_3">
+      <created>1611848574474</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611848574474</updated>
+    </task>
+    <task id="LOCAL-00011" summary="3 c половиной задачки">
+      <created>1611853464142</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611853464142</updated>
+    </task>
+    <task id="LOCAL-00012" summary="4 c половиной задачки">
+      <created>1611857408795</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611857408795</updated>
+    </task>
+    <task id="LOCAL-00013" summary="after CR">
+      <created>1611944464185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611944464185</updated>
+    </task>
+    <task id="LOCAL-00014" summary="after CR">
+      <created>1611944743852</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611944743852</updated>
+    </task>
+    <task id="LOCAL-00015" summary="after CR">
+      <created>1611944765431</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1611944765431</updated>
+    </task>
+    <task id="LOCAL-00016" summary="доработки и исправления">
+      <created>1611945927554</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611945927554</updated>
+    </task>
+    <task id="LOCAL-00017" summary="доработки и исправления">
+      <created>1611948825151</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611948825151</updated>
+    </task>
+    <task id="LOCAL-00018" summary="clone hw_4">
+      <created>1612196291658</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612196291658</updated>
+    </task>
+    <task id="LOCAL-00019" summary="clone hw_5">
+      <created>1612196803075</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1612196803075</updated>
+    </task>
+    <task id="LOCAL-00020" summary="часть задачек">
+      <created>1612287132828</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612287132828</updated>
+    </task>
+    <task id="LOCAL-00021" summary="after CR">
+      <created>1612292319444</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1612292319445</updated>
+    </task>
+    <task id="LOCAL-00022" summary="hw_5 первые 2 задачки">
+      <created>1612384764547</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1612384764548</updated>
+    </task>
+    <task id="LOCAL-00023" summary="hw_5 первые 2 задачки">
+      <created>1612535382034</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612535382034</updated>
+    </task>
+    <task id="LOCAL-00024" summary="hw_6 clone">
+      <created>1612813868052</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1612813868053</updated>
+    </task>
+    <task id="LOCAL-00025" summary="hw_7 clone">
+      <created>1612814047439</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612814047439</updated>
+    </task>
+    <task id="LOCAL-00026" summary="hw_6 6 tasks">
+      <created>1612896771802</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612896771802</updated>
+    </task>
+    <task id="LOCAL-00027" summary="hw_6 after CR">
+      <created>1613058123280</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613058123280</updated>
+    </task>
+    <task id="LOCAL-00028" summary="hw_6 after CR">
+      <created>1613058184810</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613058184810</updated>
+    </task>
+    <task id="LOCAL-00029" summary="наброски hw_7">
+      <created>1613072451566</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1613072451567</updated>
+    </task>
+    <task id="LOCAL-00030" summary="after CR">
+      <created>1613072585319</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613072585319</updated>
+    </task>
+    <task id="LOCAL-00031" summary="часть hw_7">
+      <created>1613154502769</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1613154502771</updated>
+    </task>
+    <task id="LOCAL-00032" summary="hw_7">
+      <created>1613212768356</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1613212768356</updated>
+    </task>
+    <task id="LOCAL-00033" summary="vp_1">
+      <created>1613486376474</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1613486376476</updated>
+    </task>
+    <task id="LOCAL-00034" summary="наброски vp_1">
+      <created>1613490148542</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1613490148542</updated>
+    </task>
+    <task id="LOCAL-00035" summary="наброски vp_1">
+      <created>1613504163242</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1613504163242</updated>
+    </task>
+    <task id="LOCAL-00036" summary="наброски vp_1">
+      <created>1613594397750</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1613594397751</updated>
+    </task>
+    <task id="LOCAL-00037" summary="наброски vp_1">
+      <created>1613749335340</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1613749335340</updated>
+    </task>
+    <task id="LOCAL-00038" summary="наброски vp_1">
+      <created>1613756615630</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1613756615632</updated>
+    </task>
+    <task id="LOCAL-00039" summary="наброски vp_1">
+      <created>1613757538379</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1613757538379</updated>
+    </task>
+    <task id="LOCAL-00040" summary="наброски vp_1">
+      <created>1613757758439</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1613757758439</updated>
+    </task>
+    <task id="LOCAL-00041" summary="наброски vp_1">
+      <created>1613758584635</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1613758584635</updated>
+    </task>
+    <task id="LOCAL-00042" summary="наброски vp_1">
+      <created>1613762466049</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1613762466049</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="hw_1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/course-javascript" />
+    </ignored-roots>
+    <MESSAGE value="minus jpg" />
+    <MESSAGE value="loft sborka" />
+    <MESSAGE value="homework_1" />
+    <MESSAGE value="clone hw_2" />
+    <MESSAGE value="3 задачки" />
+    <MESSAGE value="git clone hw_3" />
+    <MESSAGE value="3 c половиной задачки" />
+    <MESSAGE value="4 c половиной задачки" />
+    <MESSAGE value="доработки и исправления" />
+    <MESSAGE value="clone hw_4" />
+    <MESSAGE value="clone hw_5" />
+    <MESSAGE value="часть задачек" />
+    <MESSAGE value="hw_5 первые 2 задачки" />
+    <MESSAGE value="hw_6 clone" />
+    <MESSAGE value="hw_7 clone" />
+    <MESSAGE value="hw_6 6 tasks" />
+    <MESSAGE value="hw_6 after CR" />
+    <MESSAGE value="наброски hw_7" />
+    <MESSAGE value="after CR" />
+    <MESSAGE value="часть hw_7" />
+    <MESSAGE value="hw_7" />
+    <MESSAGE value="vp_1" />
+    <MESSAGE value="наброски vp_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="наброски vp_1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="279" width="557" height="364" key="#Notifications" timestamp="1613778005793">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="453" y="279" width="557" height="364" key="#Notifications/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613778005793" />
+    <state x="2144" y="337" width="685" height="341" key="#Notifications/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1612196432527" />
+    <state x="2267" y="161" key="#PHP" timestamp="1613487146601">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2267" y="161" key="#PHP/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487146600" />
+    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1613758236872">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1692" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613758236872" />
+    <state x="2340" y="273" key="FileChooserDialogImpl" timestamp="1613487312022">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2340" y="273" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613487312022" />
+    <state x="635" y="352" key="NewPhpFileDialog" timestamp="1611751836684">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="635" y="352" key="NewPhpFileDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1611751836684" />
+    <state x="2313" y="239" key="RollbackChangesDialog" timestamp="1611590355516">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2313" y="239" key="RollbackChangesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611590355516" />
+    <state x="2061" y="150" key="SettingsEditor" timestamp="1611590670431">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2061" y="150" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1611590670431" />
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2" timestamp="1614009083023">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="460" y="208" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613212770004" />
+    <state x="2401" y="151" key="Vcs.Push.Dialog.v2/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1614009083023" />
+    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613920786503">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="42" width="1600" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@0.0.1600.860" timestamp="1613778083063" />
+    <state x="1694" y="123" width="1700" height="818" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613920786503" />
+    <state x="2267" y="253" width="585" height="534" key="find.popup" timestamp="1613764709693">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2267" y="253" width="585" height="534" key="find.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1613764709693" />
+    <state x="2340" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1612813782090">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2340" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1612813782090" />
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612196513994">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1612196513994" />
+  </component>
+</project>

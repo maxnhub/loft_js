@@ -12,14 +12,15 @@ const proxy = {};
 
 for (const project of projects) {
   const projectPath = path.join(root, project);
+
   entries[project] = projectPath;
   htmlPlugins.push(
-    new HtmlPlugin({
-      title: project,
-      template: path.resolve('./layout.html'),
-      filename: `${project}/index.html`,
-      chunks: [project],
-    })
+      new HtmlPlugin({
+        title: project,
+        template: path.resolve('./layout.html'),
+        filename: `${project}/index.html`,
+        chunks: [project],
+      })
   );
 
   const settingsPath = path.join(projectPath, 'settings.json');
@@ -51,7 +52,8 @@ module.exports = {
         options: { cacheDirectory: true },
       },
       {
-        test: /projects\/.+\.html/,
+        test: /\.html/,
+        include: [path.resolve(__dirname, 'projects')],
         use: [
           { loader: './scripts/html-inject-loader.js' },
           {
