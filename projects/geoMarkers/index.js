@@ -23,9 +23,11 @@ class Map {
     async onInit() {
         const coords = await this.getData();
         const arr = Object.entries(coords);
+
         arr.forEach(([key, item]) => {
             this.createPlacemark(item.coords);
         });
+
         document.body.addEventListener('click', this.onDocumentClick.bind(this));
     }
     async postData(body = {}) {
@@ -33,15 +35,14 @@ class Map {
             method: 'post',
             body: JSON.stringify(body),
         });
+
         return await res.json();
     }
     async getData() {
-        // fetch('https://maps-reviews-e5dc7-default-rtdb.firebaseio.com/reviews.json')
-        //     .then(response => response.json())
-        //     .then(res => console.log('res', res))
         const res = await fetch('https://maps-reviews-e5dc7-default-rtdb.firebaseio.com/reviews.json', {
             method: 'get'
         });
+
         return await res.json();
     }
     createForm(coords, data) {
@@ -50,10 +51,8 @@ class Map {
         const reviewList = root.querySelector('.review-list');
         const reviewForm = root.querySelector('[data-role=review-form]');
         reviewForm.dataset.coords = JSON.stringify(coords);
-        console.log('data', data);
-        console.log('coords', coords);
         const arr = Object.entries(data);
-        console.log('arr', arr);
+
         arr.forEach(([key, item]) => {
             const div = document.createElement('div');
             div.classList.add('review-item');
@@ -75,6 +74,7 @@ class Map {
         this.setBalloonContent(form.innerHTML);
     }
     async onDocumentClick(e) {
+
         if (e.target.dataset.role === 'review-add') {
             const reviewForm = document.querySelector('[data-role=review-form]');
             const coords = JSON.parse(reviewForm.dataset.coords);
@@ -102,14 +102,17 @@ class Map {
             clusterDisableClickZoom: true,
             clusterOpenBalloonOnClick: false,
         });
+
         this.clusterer.events.add('click', (e) => {
             const coords = e.get('target').geometry.getCoordinates();
             this.onClick(coords);
         });
+
         this.map = new ymaps.Map(this.mapId, {
             center: [55.76, 37.64],
             zoom: 10,
         });
+
         this.map.events.add('click', (e) => this.onClick(e.get('coords')));
         this.map.geoObjects.add(this.clusterer);
     }
@@ -124,10 +127,12 @@ class Map {
     }
     createPlacemark(coords) {
         const placemark = new ymaps.Placemark(coords);
+
         placemark.events.add('click', (e) => {
             const coords = e.get('target').geometry.getCoordinates();
             this.onClick(coords);
         });
+
         this.clusterer.add(placemark);
     }
 }
