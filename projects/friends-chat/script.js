@@ -33,5 +33,6 @@ auth()
     return callAPI('users.get', { name_case: 'gen'});
     })
     .then(me => {
-        console.log(me);
+        const headerInfo = document.querySelector('#headerInfo');
+        headerInfo.textContent = `Друзья на странице ${me.first_name} ${me.last_name}`;
     })
