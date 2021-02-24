@@ -30,9 +30,14 @@ function callAPI(method, params) {
 
 auth()
     .then(() => {
-    return callAPI('users.get', { name_case: 'gen'});
+        return callAPI('users.get', { name_case: 'gen'});
     })
-    .then(me => {
+    .then(([me]) => {
         const headerInfo = document.querySelector('#headerInfo');
         headerInfo.textContent = `Друзья на странице ${me.first_name} ${me.last_name}`;
+
+        return callAPI('friends.get', { fields: 'city, country, photo_100'});
+    })
+    .then(friends => {
+        console.log(friends);
     })
