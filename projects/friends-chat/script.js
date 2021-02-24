@@ -40,7 +40,7 @@ function callAPI(method, params) {
 
         const template = document.querySelector('#user-template').textContent;
         const render = Handlebars.compile(template);
-        const html = render(friends.items);
+        const html = render(friends);
         const results = document.querySelector('#results');
 
         results.innerHTML = html;
