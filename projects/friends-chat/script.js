@@ -72,15 +72,13 @@ function addListeners() {
     const friendsInput = document.getElementById('friendsSearch');
     const bestFriendsInput = document.getElementById('bestFriendsSearch');
 
-    friendsInput.addEventListener('change', function (event) {
+    friendsInput.addEventListener('keyup', function (event) {
         setTimeout(() => {
             filterFriends(false, event.target.value)
         }, 1000);
-
-
     });
 
-    bestFriendsInput.addEventListener('change', function (event) {
+    bestFriendsInput.addEventListener('keyup', function (event) {
         setTimeout(() => {
             filterFriends(true, event.target.value)
         }, 1000);
