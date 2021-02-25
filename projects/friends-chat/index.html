@@ -14,24 +14,45 @@
             display: flex;
         }
 
-        #friendsSearch, #bestFriendsList {
+        #friendsSearch, #bestFriendsSearch {
             margin-bottom: 25px;
         }
 
-        all_friends, .best_friends {
+        .friends__results {
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #484848;
+        }
+
+        #results {
+            margin-right: 20px;
+        }
+
+        .all_friends, .best_friends {
             width: 50%;
+        }
+
+        .friends__search {
+            padding: 10px;
+            width: 50%;
+            border-radius: 8px;
+            border: 1px solid #484848;
         }
 
         .friend__container {
             display: flex;
-            align-items: center;
-            width: 100%;
+            flex-direction: column;
+            width: 96%;
             margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #484848;
+            padding: 10px;
         }
 
         .friend__desc {
             display: flex;
             align-items: center;
+            margin-bottom: 15px;
         }
 
         .friend__logo {
@@ -39,6 +60,7 @@
             width: 100px;
             border-radius: 50%;
             overflow: hidden;
+            margin-right: 15px;
         }
 
         .friend__button {
@@ -49,6 +71,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-left: auto;
+        }
+
+        .friend__geo {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -57,24 +86,25 @@
         <h1 id="headerInfo"></h1>
         <div class="friends_list-container">
             <div class="all_friends">
-                <p>Ваши друзья</p>
+                <p>Поиск по друзьям</p>
                 <label for="friendsSearch">
-                    <input type="text" id="friendsSearch">
+                    <input class="friends__search" type="text" id="friendsSearch" placeholder="Введите имя друга">
                 </label>
-                <div id="results"></div>
+                <div class="friends__results" id="results"></div>
             </div>
             <div class="best_friends">
-                <p>Лучшие друзья</p>
+                <p>Поиск по друзьям</p>
                 <label for="bestFriendsSearch">
-                    <input type="text" id="bestFriendsSearch">
+                    <input class="friends__search" type="text" id="bestFriendsSearch" placeholder="Введите имя друга">
                 </label>
 
-                <div id="bestFriendsList"></div>
+                <div class="friends__results" id="bestFriendsList"></div>
             </div>
         </div>
 
     </div>
     <script id="friends-template" type="text/x-handlebars-template">
+        <h2>Ваши друзья</h2>
         <div class="friends">
             {{#each items}}
                 <div class="friend__container">
@@ -82,7 +112,7 @@
                         <img src="{{photo_100}}" class="friend__logo"/>
                         <span>{{first_name}} {{last_name}}</span>
                         <div data-id="{{id}}" class="friend__button removeBestFriend" onclick="removeBestFriend(event)">
-                            <
+                            >
                         </div>
                     </div>
                     <div class="friend__geo">{{country.title}}, {{city.title}}</div>
@@ -92,6 +122,7 @@
     </script>
 
     <script id="best-friends-template" type="text/x-handlebars-template">
+        <h2>Лучшие друзья</h2>
         <div class="friends">
             {{#each items}}
                 <div class="friend__container">
