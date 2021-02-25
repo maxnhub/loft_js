@@ -63,6 +63,11 @@
             margin-right: 15px;
         }
 
+        .friend__logo--best {
+            margin-right: 0px;
+            margin-left: 15px;
+        }
+
         .friend__button {
             width: 50px;
             height: 50px;
@@ -76,8 +81,18 @@
             margin-left: auto;
         }
 
+        .removeBestFriend {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
         .friend__geo {
             padding-left: 20px;
+        }
+
+        .friend__geo--best {
+            padding-right: 20px;
+            margin-left: auto;
         }
     </style>
 </head>
@@ -127,13 +142,13 @@
             {{#each items}}
                 <div class="friend__container">
                     <div class="friend__desc">
-                        <img src="{{photo_100}}" class="friend__logo"/>
-                        <span>{{first_name}} {{last_name}}</span>
                         <div data-id="{{id}}" class="friend__button removeBestFriend" onclick="removeBestFriend(event)">
                             <
                         </div>
+                        <span>{{first_name}} {{last_name}}</span>
+                        <img src="{{photo_100}}" class="friend__logo friend__logo--best"/>
                     </div>
-                    <div class="friend__geo">{{country}}, {{city}}</div>
+                    <div class="friend__geo friend__geo--best">{{country}}, {{city}}</div>
                 </div>
             {{/each}}
         </div>
