@@ -89,27 +89,27 @@ function addToBestFriend(event){
     const friendId = parseInt(event.target.dataset.id);
     savedIds.add(friendId);
 
-    renderNewList();
+    renderNewList(false, friendId);
 }
 
 function removeBestFriend(event){
     const friendId = parseInt(event.target.dataset.id);
     savedIds.delete(friendId);
 
-    renderNewList();
+    renderNewList(true, friendId);
 }
 
-function renderNewList(isRemove = false) {
+function renderNewList(isRemove = false, item) {
 
     let myFilteredFriends = [];
     let myFilteredBestFriends = [];
 
     if (isRemove) {
-        myFilteredFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item.id));
-        myFilteredBestFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item.id));
+        myFilteredFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item));
+        myFilteredBestFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item));
     } else {
-        myFilteredFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item.id));
-        myFilteredBestFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item.id));
+        myFilteredFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item));
+        myFilteredBestFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item));
     }
 
     const resultFriends = {
