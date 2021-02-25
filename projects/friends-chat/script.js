@@ -2,6 +2,16 @@ VK.init({
     apiId: 7770956
 });
 
+const STORAGE_KEY = 'FRIENDS_STORAGE';
+
+let savedIds = new Set();
+
+bestFriends = {
+    items: []
+};
+
+let myFriends = [];
+
 function auth() {
     return new Promise((resolve, reject) => {
         VK.Auth.login(data => {
@@ -31,20 +41,161 @@ function callAPI(method, params) {
 (async () => {
     try {
         await auth();
-        const [me] = await callAPI('users.get', { name_case: 'gen'});
+        const [me] = await callAPI('users.get', {name_case: 'gen'});
         const headerInfo = document.querySelector('#headerInfo');
-
         headerInfo.textContent = `Друзья на странице ${me.first_name} ${me.last_name}`;
 
-        const friends = await callAPI('friends.get', { fields: 'city, country, photo_100'});
+        const storage_model = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
-        const template = document.querySelector('#user-template').textContent;
-        const render = Handlebars.compile(template);
-        const html = render(friends);
-        const results = document.querySelector('#results');
+        let friends = undefined;
 
-        results.innerHTML = html;
+        if (!storage_model) {
+            friends = await callAPI('friends.get', { fields: 'city, country, photo_100' });
+            myFriends = friends;
+        } else {
+            myFriends = {
+                items: storage_model.myFriends.items
+            }
+
+            storage_model.bestFriends.items.forEach(item => bestFriends.items.push(item));
+        }
+
+        renderFriends();
+        renderBestFriendsTemplate()
+        addListeners();
     } catch (e) {
-        console.error(e);
+        console.log(e);
     }
 })();
+
+function addListeners() {
+    const friendsInput = document.getElementById('friendsSearch');
+    const bestFriendsInput = document.getElementById('bestFriendsSearch');
+
+    friendsInput.addEventListener('change', function (event) {
+        setTimeout(() => {
+            filterFriends(false, event.target.value)
+        }, 1000);
+
+
+    });
+
+    bestFriendsInput.addEventListener('change', function (event) {
+        setTimeout(() => {
+            filterFriends(true, event.target.value)
+        }, 1000);
+    });
+}
+
+function addToBestFriend(event){
+    const root = event.target.parentElement.parentElement;
+    console.log('root', root);
+    const friendId = parseInt(event.target.dataset.id);
+    console.log(friendId);
+    savedIds.add('friendId', friendId);
+
+    const myFilteredFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item.id));
+    const myFilteredBestFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item.id));
+
+    const resultFriends = {
+        items: myFilteredFriends
+    }
+
+    bestFriends.items = [];
+    myFilteredBestFriends.forEach(item=>{
+        bestFriends.items.push(item);
+    });
+
+
+    const storage_model = {
+        myFriends: {
+            items: myFilteredFriends
+        },
+        bestFriends: {
+            items: myFilteredBestFriends
+        }
+
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(storage_model));
+
+    renderFriends(resultFriends);
+    renderBestFriendsTemplate();
+
+}
+
+function removeBestFriend(event){
+    const root = event.target.parentElement.parentElement;
+    console.log('root', root);
+    const friendId = parseInt(event.target.dataset.id);
+    console.log(friendId);
+    savedIds.remove('friendId', friendId);
+
+    const myFilteredFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item.id));
+    const myFilteredBestFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item.id));
+
+    const resultFriends = {
+        items: myFilteredFriends
+    }
+
+    bestFriends.items = [];
+    myFilteredBestFriends.forEach(item=>{
+        bestFriends.items.push(item);
+    });
+
+
+    const storage_model = {
+        myFriends: {
+            items: myFilteredFriends
+        },
+        bestFriends: {
+            items: myFilteredBestFriends
+        }
+
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(storage_model));
+
+    renderFriends(resultFriends);
+    renderBestFriendsTemplate();
+
+}
+
+
+function filterFriends(isBestFriend, value) {
+    let filteredFriends = undefined;
+
+    if (isBestFriend) {
+        filteredFriends = bestFriends.items.filter(item => item.first_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
+            || item.last_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
+        );
+    } else {
+        filteredFriends = myFriends.items.filter(item => item.first_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
+            || item.last_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
+        );
+
+    }
+
+    if (filteredFriends) {
+        const filteredItems = {
+            items: filteredFriends
+        }
+
+        isBestFriend ? renderBestFriendsTemplate(filteredItems) : renderFriends(filteredItems);
+    }
+}
+
+function renderBestFriendsTemplate(items) {
+    const bestFriendsTemplate = document.querySelector('#best-friends-template').textContent;
+    const render = Handlebars.compile(bestFriendsTemplate);
+
+    const htmlBestFriends = render(items || bestFriends);
+    const resultsBestFriends = document.querySelector('#bestFriendsList');
+    resultsBestFriends.innerHTML = htmlBestFriends;
+}
+
+function renderFriends(items) {
+    const template = document.querySelector('#friends-template').textContent;
+    const render = Handlebars.compile(template);
+    const html = render(items || myFriends);
+    const results = document.querySelector('#results');
+    results.innerHTML = html;
+}

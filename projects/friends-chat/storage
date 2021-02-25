@@ -1,0 +1,8 @@
+'FRIENDS_STORAGE' = {
+    myFriends: {
+        items: []
+    },
+    bestFriends: {
+        items: []
+    }
+}

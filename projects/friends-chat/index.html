@@ -29,20 +29,59 @@
 <body>
     <div class="container">
         <h1 id="headerInfo"></h1>
+        <div class="friends_list-container">
+            <div class="all_friends">
+                <p>Ваши друзья</p>
+                <label for="friendsSearch">
+                    <input type="text" id="friendsSearch">
+                </label>
+                <div id="results"></div>
+            </div>
+            <div class="best_friends">
+                <p>Друзья в списке</p>
+                <label for="bestFriendsSearch">
+                    <input type="text" id="bestFriendsSearch">
+                </label>
 
-        <div id="results"></div>
+                <div id="bestFriendsList"></div>
+            </div>
+        </div>
+
     </div>
-
-    <script id="user-template" type="text/x-handlebars-template">
+    <script id="friends-template" type="text/x-handlebars-template">
         <div class="friends">
             {{#each items}}
-            <div class="friend">
-                <img src="{{photo_100}}" />
-                <div>{{first_name}} {{last_name}}</div>
-            </div>
+                <div class="friend__container">
+                    <div class="friend__desc">
+                        <img src="{{photo_100}}" class="friends__logo"/>
+                        <span>{{first_name}} {{last_name}}</span>
+                        <div data-id="{{id}}" class="friends__button removeBestFriend" onclick="removeBestFriend(event)">
+                            <
+                        </div>
+                    </div>
+                    <div class="friend__geo">{{country}}, {{city}}</div>
+                </div>
             {{/each}}
         </div>
     </script>
+
+    <script id="best-friends-template" type="text/x-handlebars-template">
+        <div class="friends">
+            {{#each items}}
+                <div class="friend__container">
+                    <div class="friend__desc">
+                        <img src="{{photo_100}}" class="friends__logo"/>
+                        <span>{{first_name}} {{last_name}}</span>
+                        <div data-id="{{id}}" class="friends__button removeBestFriend" onclick="removeBestFriend(event)">
+                            <
+                        </div>
+                    </div>
+                    <div class="friend__geo">{{country}}, {{city}}</div>
+                </div>
+            {{/each}}
+        </div>
+    </script>
+
     <script src="./script.js"></script>
 </body>
 </html>
