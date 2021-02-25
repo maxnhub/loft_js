@@ -126,7 +126,7 @@ function removeBestFriend(event){
     console.log('root', root);
     const friendId = parseInt(event.target.dataset.id);
     console.log(friendId);
-    savedIds.remove(friendId);
+    savedIds.delete(friendId);
 
     const myFilteredFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item.id));
     const myFilteredBestFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item.id));
