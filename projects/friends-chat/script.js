@@ -92,7 +92,7 @@ function addToBestFriend(event){
     console.log('root', root);
     const friendId = parseInt(event.target.dataset.id);
     console.log(friendId);
-    savedIds.add('friendId', friendId);
+    savedIds.add(friendId);
 
     const myFilteredFriends = myFriends.items.filter(item => !Array.from(savedIds).includes(item.id));
     const myFilteredBestFriends = myFriends.items.filter(item => Array.from(savedIds).includes(item.id));
