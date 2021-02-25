@@ -87,7 +87,7 @@ function addListeners() {
     });
 }
 
-let button = document.querySelector('friend__button');
+let button = document.querySelectorAll('.friend__button');
 
 button.addEventListener('click', function(event) {
     const root = event.target.parentElement.parentElement;
