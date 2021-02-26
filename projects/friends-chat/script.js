@@ -4,6 +4,8 @@ VK.init({
 
 const STORAGE_KEY = 'FRIENDS_STORAGE';
 
+const DELAY = 1000;
+
 let savedIds = new Set();
 
 bestFriends = {
@@ -45,19 +47,19 @@ function callAPI(method, params) {
         const headerInfo = document.querySelector('#headerInfo');
         headerInfo.textContent = `Друзья на странице ${me.first_name} ${me.last_name}`;
 
-        const storage_model = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        const storageModel = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
         let friends = undefined;
 
-        if (!storage_model) {
+        if (!storageModel) {
             friends = await callAPI('friends.get', { fields: 'city, country, photo_100' });
             myFriends = friends;
         } else {
             myFriends = {
-                items: storage_model.myFriends.items
+                items: storageModel.myFriends.items
             }
 
-            storage_model.bestFriends.items.forEach(item => bestFriends.items.push(item));
+            storageModel.bestFriends.items.forEach(item => bestFriends.items.push(item));
         }
 
         renderFriends();
@@ -75,13 +77,13 @@ function addListeners() {
     friendsInput.addEventListener('keyup', function (event) {
         setTimeout(() => {
             filterFriends(false, event.target.value)
-        }, 1000);
+        }, DELAY);
     });
 
     bestFriendsInput.addEventListener('keyup', function (event) {
         setTimeout(() => {
             filterFriends(true, event.target.value)
-        }, 1000);
+        }, DELAY);
     });
 }
 
@@ -112,12 +114,13 @@ function renderNewList(myFilteredFriends, myFilteredBestFriends) {
     }
 
     bestFriends.items = [];
+
     myFilteredBestFriends.forEach(item=>{
         bestFriends.items.push(item);
     });
 
 
-    const storage_model = {
+    const storageModel = {
         myFriends: {
             items: myFilteredFriends
         },
@@ -126,7 +129,7 @@ function renderNewList(myFilteredFriends, myFilteredBestFriends) {
         }
 
     }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(storage_model));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(storageModel));
 
     renderFriends(resultFriends);
     renderBestFriendsTemplate();
@@ -136,14 +139,13 @@ function filterFriends(isBestFriend, value) {
     let filteredFriends = undefined;
 
     if (isBestFriend) {
-        filteredFriends = bestFriends.items.filter(item => item.first_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
-            || item.last_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
+        filteredFriends = bestFriends.items.filter(item => item.first_name.toUpperCase().includes(value.toUpperCase()) >= 0
+            || item.last_name.toUpperCase().includes(value.toUpperCase()) >= 0
         );
     } else {
-        filteredFriends = myFriends.items.filter(item => item.first_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
-            || item.last_name.toUpperCase().indexOf(value.toUpperCase()) >= 0
+        filteredFriends = myFriends.items.filter(item => item.first_name.toUpperCase().includes(value.toUpperCase()) >= 0
+            || item.last_name.toUpperCase().includes(value.toUpperCase()) >= 0
         );
-
     }
 
     if (filteredFriends) {
@@ -156,18 +158,19 @@ function filterFriends(isBestFriend, value) {
 }
 
 function renderBestFriendsTemplate(items) {
-    const bestFriendsTemplate = document.querySelector('#best-friends-template').textContent;
+    const bestFriendsTemplate = document.getElementById('best-friends-template').textContent;
     const render = Handlebars.compile(bestFriendsTemplate);
-
     const htmlBestFriends = render(items || bestFriends);
-    const resultsBestFriends = document.querySelector('#bestFriendsList');
+    const resultsBestFriends = document.getElementById('bestFriendsList');
+
     resultsBestFriends.innerHTML = htmlBestFriends;
 }
 
 function renderFriends(items) {
-    const template = document.querySelector('#friends-template').textContent;
+    const template = document.getElementById('friends-template').textContent;
     const render = Handlebars.compile(template);
     const html = render(items || myFriends);
-    const results = document.querySelector('#results');
+    const results = document.getElementById('results');
+
     results.innerHTML = html;
 }
