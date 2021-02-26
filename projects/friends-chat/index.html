@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friends chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <style>
+        body {
+            font: 16px Helvetica, sans-serif, Arial;
+        }
+
+        .friends_list-container {
+            display: flex;
+        }
+
+        #friendsSearch, #bestFriendsSearch {
+            margin-bottom: 25px;
+        }
+
+        .friends__results {
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #484848;
+        }
+
+        #results {
+            margin-right: 20px;
+        }
+
+        .all_friends, .best_friends {
+            width: 50%;
+        }
+
+        .friends__search {
+            padding: 10px;
+            width: 50%;
+            border-radius: 8px;
+            border: 1px solid #484848;
+        }
+
+        .friend__container {
+            display: flex;
+            flex-direction: column;
+            width: 96%;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #484848;
+            padding: 10px;
+        }
+
+        .friend__desc {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .friend__logo {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .friend__logo--best {
+            margin-right: 0px;
+            margin-left: 15px;
+        }
+
+        .friend__button {
+            width: 50px;
+            height: 50px;
+            background: #f3f3f3;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-left: auto;
+        }
+
+        .removeBestFriend {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .friend__geo {
+            padding-left: 20px;
+        }
+
+        .friend__geo--best {
+            padding-right: 20px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="headerInfo"></h1>
+        <div class="friends_list-container">
+            <div class="all_friends">
+                <p>Поиск по друзьям</p>
+                <label for="friendsSearch">
+                    <input class="friends__search" type="text" id="friendsSearch" placeholder="Введите имя друга">
+                </label>
+                <div class="friends__results" id="results"></div>
+            </div>
+            <div class="best_friends">
+                <p>Поиск по друзьям</p>
+                <label for="bestFriendsSearch">
+                    <input class="friends__search" type="text" id="bestFriendsSearch" placeholder="Введите имя друга">
+                </label>
+
+                <div class="friends__results" id="bestFriendsList"></div>
+            </div>
+        </div>
+
+    </div>
+    <script id="friends-template" type="text/x-handlebars-template">
+        <h2>Ваши друзья</h2>
+        <div class="friends">
+            {{#each items}}
+                <div class="friend__container">
+                    <div class="friend__desc">
+                        <img src="{{photo_100}}" class="friend__logo"/>
+                        <span>{{first_name}} {{last_name}}</span>
+                        <div data-id="{{id}}" class="friend__button addToBestFriend" onclick="addToBestFriend(event)">
+                            >
+                        </div>
+                    </div>
+                    <div class="friend__geo">{{country.title}}, {{city.title}}</div>
+                </div>
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="best-friends-template" type="text/x-handlebars-template">
+        <h2>Лучшие друзья</h2>
+        <div class="friends">
+            {{#each items}}
+                <div class="friend__container">
+                    <div class="friend__desc">
+                        <div data-id="{{id}}" class="friend__button removeBestFriend" onclick="removeBestFriend(event)">
+                            <
+                        </div>
+                        <span>{{first_name}} {{last_name}}</span>
+                        <img src="{{photo_100}}" class="friend__logo friend__logo--best"/>
+                    </div>
+                    <div class="friend__geo friend__geo--best">{{country.title}}, {{city.title}}</div>
+                </div>
+            {{/each}}
+        </div>
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+</html>
