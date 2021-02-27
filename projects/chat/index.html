@@ -134,11 +134,14 @@
         .messages__item-time {
             color: #999999;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="main-content" id="app">
-        <div class="entry hidden" id="login">
+        <div class="entry" id="login">
             <input class="entry__input" type="text" placeholder="Введите свой логин" data-role="login-input">
             <button class="entry__button" type="button" data-role="login-entry">Войти</button>
             <div class="entry__error" data-role="login-error"></div>
@@ -146,14 +149,14 @@
         <div id="chat" class="chat hidden">
             <div class="users">
                 <div class="users__person">
-                    <div class="users__person-avatar">
+                    <div class="users__person-avatar" data-role="user-photo">
                         <img class="users__person-pic" src="2.jpg" alt="person-avatar">
                     </div>
-                    <div class="users__person-login">Логин</div>
+                    <div class="users__person-login" data-role="user-login">Логин</div>
                 </div>
                 <div class="users__field">
                     <div class="users__filed-desc">ВСЕ ПОЛЬЗОВАТЕЛИ:</div>
-                    <ul class="users__field__list"></ul>
+                    <ul class="users__field__list" data-role="user-list"></ul>
                 </div>
             </div>
             <div class="messages">
