@@ -17,12 +17,14 @@
         }
         .main-content {
             height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .entry {
             height: 200px;
             width: 450px;
             padding: 0 20px;
-            margin: 30% auto 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,7 +32,6 @@
             border-radius: 8px;
             box-shadow: 4px 4px 11px 2px #b7b0b0;
             background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,227,240,0.4906337535014006) 0%, rgba(232,199,229,1) 100%);
-            display: none;
         }
         .entry:hover {
             box-shadow: 4px 4px 11px 6px #b7b0b0;
@@ -67,6 +68,7 @@
             height: 100%;
         }
         .users {
+            box-sizing: border-box;
             width: 30%;
             min-height: 100%;
             padding: 15px;
@@ -116,8 +118,6 @@
         }
         .messages__item-avatar {
             margin-right: 15px;
-        }
-        .messages__item-pic {
             height: 50px;
             width: 50px;
             border-radius: 50%;
@@ -141,46 +141,35 @@
 </head>
 <body>
     <div class="main-content" id="app">
-        <div class="entry" id="login">
+        <div class="entry bb hidden" id="login">
             <input class="entry__input" type="text" placeholder="Введите свой логин" data-role="login-input">
-            <button class="entry__button" type="button" data-role="login-entry">Войти</button>
+            <button class="entry__button" type="button" data-role="login-submit">Войти</button>
             <div class="entry__error" data-role="login-error"></div>
         </div>
-        <div id="chat" class="chat hidden">
+        <div class="chat hidden" id="chat">
             <div class="users">
                 <div class="users__person">
                     <div class="users__person-avatar" data-role="user-photo">
                         <img class="users__person-pic" src="2.jpg" alt="person-avatar">
                     </div>
-                    <div class="users__person-login" data-role="user-login">Логин</div>
+                    <div class="users__person-login" data-role="user-name"></div>
                 </div>
                 <div class="users__field">
                     <div class="users__filed-desc">ВСЕ ПОЛЬЗОВАТЕЛИ:</div>
-                    <ul class="users__field__list" data-role="user-list"></ul>
+                    <ul class="users__field-list" data-role="user-list"></ul>
                 </div>
             </div>
             <div class="messages">
                 <div class="messages__field">
-                    <div class="messages__info">name вошёл в чат</div>
-                    <div class="messages__item">
-                        <div class="messages__item-avatar">
-                            <img class="messages__item-pic" src="2.jpg">
-                        </div>
-                        <div class="messages__item-desc">
-                            <div class="messages__item-info">
-                                <div class="messages__item-login">Name</div>
-                                <div class="messages__item-time">4:20</div>
-                            </div>
-                            <div class="messages__item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                        </div>
-                    </div>
+
                 </div>
-                <div class="messages__entry">
-                    <input class="messages__entry-input" type="text" placeholder="Введите текст сообщения">
-                    <button class="messages__entry-button" type="button">Отправить</button>
+                <div class="messages__entry" data-role="message-sender">
+                    <input class="messages__entry-input" type="text" data-role="message-input" placeholder="Введите текст сообщения">
+                    <button class="messages__entry-button" data-role="message-send-button" type="button">Отправить</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
